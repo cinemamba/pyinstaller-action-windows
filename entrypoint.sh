@@ -45,7 +45,7 @@ if [ -f $5 ]; then
     pip install -r $5
 fi # [ -f $5 ]
 
-sudo dpkg-reconfigure locales
+dpkg-reconfigure locales
 
 LANG=hu_HU.UTF-8
 
