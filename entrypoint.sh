@@ -21,8 +21,6 @@ SPEC_FILE=${4:-*.spec}
 
 python -m pip install --upgrade pip wheel setuptools
 
--X utf8
-
 #
 # In case the user specified a custom URL for PYPI, then use
 # that one, instead of the default one.
@@ -47,7 +45,9 @@ if [ -f $5 ]; then
     pip install -r $5
 fi # [ -f $5 ]
 
+sudo dpkg-reconfigure locales
 
+LANG=hu_HU.UTF-8
 
 # if [[ "$@" == "" ]]; then
 pyinstaller --clean -y --dist ./dist/windows --workpath /tmp $SPEC_FILE
