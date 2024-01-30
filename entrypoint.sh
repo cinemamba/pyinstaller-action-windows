@@ -19,9 +19,9 @@ WORKDIR=${SRCDIR:-/src}
 
 SPEC_FILE=${4:-*.spec}
 
-python -X utf8
-
 python -m pip install --upgrade pip wheel setuptools
+
+-X utf8
 
 #
 # In case the user specified a custom URL for PYPI, then use
