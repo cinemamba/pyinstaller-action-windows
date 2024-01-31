@@ -46,7 +46,7 @@ if [ -f $5 ]; then
 fi # [ -f $5 ]
 
 # if [[ "$@" == "" ]]; then
-python pyinstaller --clean -y --dist ./dist/windows --workpath /tmp $SPEC_FILE
+python -m PyInstaller --clean -y --dist ./dist/windows --workpath /tmp $SPEC_FILE
 pyinstaller --clean -y --dist ./dist/windows --workpath /tmp $SPEC_FILE
 chown -R --reference=. ./dist/windows
 # else
